@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 
-class SignInBtn extends StatelessWidget {
-  const SignInBtn({
+class AuthBtn extends StatelessWidget {
+  const AuthBtn({
     Key? key,
+    required this.btnText,
+    required this.btnText2,
+    required this.haveAccount,
+    required this.onPressed,
   }) : super(key: key);
+
+  final String btnText;
+  final String btnText2;
+  final String haveAccount;
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -22,16 +31,16 @@ class SignInBtn extends StatelessWidget {
             ),
           ),
           onPressed: () {},
-          child: const Text(
-            'Sign In',
-            style: TextStyle(color: Colors.white),
+          child: Text(
+            btnText,
+            style: const TextStyle(color: Colors.white),
           ),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Don't have an account?",
+              haveAccount,
               style: TextStyle(
                 color: (MediaQuery.of(context).platformBrightness ==
                         Brightness.dark
@@ -41,8 +50,8 @@ class SignInBtn extends StatelessWidget {
               ),
             ),
             TextButton(
-              onPressed: () {},
-              child: const Text("Register"),
+              onPressed: onPressed,
+              child: Text(btnText2),
             )
           ],
         ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class OtherLoginBtns extends StatelessWidget {
-  const OtherLoginBtns({super.key});
+class FbGoogleBtns extends StatelessWidget {
+  const FbGoogleBtns({super.key});
 
   @override
   Widget build(BuildContext context) {

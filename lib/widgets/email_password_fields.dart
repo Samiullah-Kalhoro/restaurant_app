@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class EmailPasswordFields extends StatefulWidget {
   const EmailPasswordFields({super.key});
-
   @override
   State<EmailPasswordFields> createState() => _EmailPasswordFieldsState();
 }
@@ -45,7 +44,7 @@ class _EmailPasswordFieldsState extends State<EmailPasswordFields> {
                 });
               },
               icon: Icon(
-                Icons.remove_red_eye,
+                obscureText ? Icons.visibility_off : Icons.remove_red_eye,
                 color: (MediaQuery.of(context).platformBrightness ==
                         Brightness.dark
                     ? Colors.white38

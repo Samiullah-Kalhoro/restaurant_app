@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/screens/registration_page.dart';
+import 'package:restaurant_app/screens/login_page.dart';
 
 import '../widgets/email_password_fields.dart';
 import '../widgets/fb_google_btns.dart';
 import '../widgets/auth_btn.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class RegistrationPage extends StatelessWidget {
+  const RegistrationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 children: [
                   const Text(
-                    'Login',
+                    'Signup',
                     style: TextStyle(fontSize: 30),
                     textAlign: TextAlign.center,
                   ),
@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    'Access account',
+                    'Register using',
                     style: TextStyle(
                       color: (MediaQuery.of(context).platformBrightness ==
                               Brightness.dark
@@ -42,7 +42,7 @@ class LoginPage extends StatelessWidget {
                   const FbGoogleBtns(),
                   const SizedBox(height: 10),
                   Text(
-                    "or Login with Email",
+                    "or Signup with Email",
                     style: TextStyle(
                       color: (MediaQuery.of(context).platformBrightness ==
                               Brightness.dark
@@ -57,12 +57,12 @@ class LoginPage extends StatelessWidget {
                     height: 40,
                   ),
                   AuthBtn(
-                    btnText: 'Login',
-                    btnText2: 'Register',
-                    haveAccount: "Don't have an account?",
+                    btnText: 'Signup',
+                    btnText2: 'Login',
+                    haveAccount: 'Do have an account?',
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const RegistrationPage(),
+                        builder: (context) => const LoginPage(),
                       ));
                     },
                   ),
